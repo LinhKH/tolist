@@ -1,4 +1,4 @@
-<form class="task-form" novalidate (submit)="onSubmit($event)">
+<form class="task-form" novalidate (keyup.enter)="onSubmit()">
 	<input 
 		autocomplete="off" 
 		class="task-form__input" 

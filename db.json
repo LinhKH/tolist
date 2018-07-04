@@ -1,14 +1,19 @@
 {
   "tasks": [
     {
-      "title": "json-server 1",
+      "title": "React And Redux",
       "completed": true,
-      "id": 1
+      "id": 2
     },
     {
-      "title": "ReactJs 1",
+      "title": "MongoDB And ExpressJS",
       "completed": false,
-      "id": 2
+      "id": 3
+    },
+    {
+      "title": "Angular 5 And NoSQL 1",
+      "completed": true,
+      "id": 4
     }
   ]
 }

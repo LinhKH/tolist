@@ -17,7 +17,7 @@
 		[task]="task"
 		(setStatus)="setStatus.emit(task)"
 		(delete)="delete.emit(task.id)"
-		(update)="update.emit(task)"
+		(update)="updateTaskList(task)"
 	></app-task-item>
 	<!-- End Item -->
 </div>

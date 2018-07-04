@@ -12,6 +12,9 @@ import { TaskFormComponent } from './components/task-form/task-form.component';
 
 import { TaskService } from './services/task.service';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 const taskRoutes: Routes = [
     {
         path: '',
@@ -22,8 +25,6 @@ const taskRoutes: Routes = [
         path: 'tasks',
         component: TasksComponent
     }
-    // task/:id
-    // task/:id/edit
 ];
 
 @NgModule({
@@ -38,7 +39,12 @@ const taskRoutes: Routes = [
         BrowserModule,
         HttpClientModule,
         FormsModule,
-        RouterModule.forRoot(taskRoutes)
+        RouterModule.forRoot(taskRoutes),
+        BrowserAnimationsModule,
+        ToastrModule.forRoot({
+            positionClass: 'toast-bottom-right',
+            preventDuplicates: true,
+          }),
     ],
     providers: [TaskService],
     bootstrap: [AppComponent]

@@ -14,7 +14,7 @@
         <div class="task-item__title" tabindex="0" *ngIf="isEditing == false">
             {{ task.title }}
         </div>
-        <form class="task-form" novalidate *ngIf="isEditing == true" (ngSubmit)="update.emit()">
+        <form class="task-form" novalidate *ngIf="isEditing == true" (keyup.enter)="update()">
             <input autocomplete="off" autoFocus class="task-item__input" name="title" type="text" [(ngModel)]="task.title">
         </form>
     </div>

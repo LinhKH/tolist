@@ -21,7 +21,10 @@ export class TaskListComponent implements OnInit {
 
 	constructor(
 		public activatedRoute: ActivatedRoute
-	) { }
+    ) { }
+    updateTaskList(task: Task) {
+        this.update.emit(task);
+    }
 
 	ngOnInit() {
 		this.subscription = this.activatedRoute.params.subscribe((data: Params) => {

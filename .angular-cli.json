@@ -23,7 +23,8 @@
             "assets/css/font-awesome.min.css",
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
             "assets/css/materialdesignicon.css",
-            "assets/css/style.css"
+            "assets/css/style.css",
+            "node_modules/ngx-toastr/toastr.css"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",

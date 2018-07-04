@@ -11,7 +11,7 @@ export class TaskItemComponent implements OnInit {
 	@Input('task') task: Task;
 	@Output('setStatus') setStatus = new EventEmitter<any>();
 	@Output('delete') delete = new EventEmitter<any>();
-	@Output('update') update = new EventEmitter<any>();
+	@Output('update') updateConnect = new EventEmitter<any>();
 
 	public isEditing : boolean = false;
 
@@ -20,7 +20,9 @@ export class TaskItemComponent implements OnInit {
 	ngOnInit() {
 
 	}
-
+    update() {
+        this.updateConnect.emit();
+    }
 	onEditing(){
 		this.isEditing = true;
 	}

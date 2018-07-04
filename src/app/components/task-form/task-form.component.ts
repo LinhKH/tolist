@@ -1,6 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from './../../models/task.class';
 
+
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
 	selector: 'app-task-form',
 	templateUrl: './task-form.component.html',
@@ -11,16 +14,20 @@ export class TaskFormComponent implements OnInit {
 	public title: string = '';
 	@Output('addTask') addTask = new EventEmitter<string>();
 
-	constructor() { }
+	constructor(private toastr: ToastrService) { }
 
 	ngOnInit() {
 
 	}
 
-	onSubmit(e) {
-		e.preventDefault();
-		this.addTask.emit(this.title);
-		this.title = '';
+	onSubmit() {
+        if(this.title.trim() != '') {
+            this.addTask.emit(this.title);
+		    this.title = '';
+        } else {
+            this.toastr.error('Error !', 'Please enter your task');
+        }
+		
 	}
 
 }
