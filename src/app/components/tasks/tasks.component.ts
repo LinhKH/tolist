@@ -46,7 +46,10 @@ export class TasksComponent implements OnInit {
 	}
 
 	setStatus(task : Task){
+
         // l_kieu
+        // set status true false 
+
 		task.completed = !task.completed;
 		this.subscription = this.taskService.update(task).subscribe((data : Task) => {
 			this.updateData(data);
